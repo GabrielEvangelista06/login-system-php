@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.mainLogin,
+.mainHome {
+  align-items: center;
+  background: #232226;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.mainLogin__leftLogin,
+.mainHome__rightHome {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  width: 50vh;
+}
+
+.mainLogin__leftLogin > h1 {
+  color: #92b395;
+  font-size: 3vw;
+  text-transform: uppercase;
+}
+
+.leftLogin__img,
+.rightHome__img {
+  width: 35vw;
+}
+
+.mainLogin__rightLogin,
+.mainHome__leftHome {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 50vh;
+}
+
+.rightLogin__cardLogin,
+.leftHome__cardHome {
+  align-items: center;
+  background: #0f4571;
+  border-radius: 20px;
+  box-shadow: 0px 10px 40px #00000056;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 35px;
+  width: 60%;
+}
+
+.leftHome__cardHome {
+  margin-left: 1rem;
+}
+
+.mainLogin__rightLogin h1 {
+  color: #92b395;
+  font-weight: 800;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.cardHome__welcome {
+  color: #ffffff;
+}
+
+.cardLogin__textfield {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.textfield__label {
+  color: #f0ffffde;
+  margin-bottom: 10px;
+}
+
+.textfield__input {
+  background: #221d21;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 10px 40px #00000056;
+  color: #f0ffffde;
+  font-size: 12pt;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+.textfield__input::placeholder {
+  color: #f0ffff94;
+}
+
+#btnLogin,
+.cardHome__logout {
+  background: #92b395;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 10px 40px -12px #050003;
+  color: #221d21;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 25px;
+  outline: none;
+  padding: 16px 0px;
+  text-transform: uppercase;
+  width: 75%;
+}
+
+#btnLogin:hover,
+.cardHome__logout:hover {
+  opacity: 0.7;
+  transition: 0.3s ease-in-out;
+}
+
+.cardHome__logout {
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  body * {
+    box-sizing: border-box;
+  }
+
+  .mainLogin,
+  .mainHome {
+    flex-direction: column;
+  }
+
+  .mainLogin__leftLogin {
+    height: auto;
+    width: 100%;
+  }
+
+  .mainLogin__leftLogin > h1 {
+    order: 2;
+  }
+
+  .mainLogin__rightLogin {
+    height: auto;
+    width: 100%;
+  }
+
+  .leftLogin__img {
+    order: 1;
+  }
+
+  .leftLogin__img,
+  .rightHome__img {
+    width: 50vw;
+  }
+
+  .rightLogin__cardLogin,
+  .leftHome__cardHome {
+    width: 90%;
+  }
+
+  .cardHome__welcome {
+    text-align: center;
+  }
+
+  .leftHome__cardHome {
+    margin-left: 0;
+  }
+
+  .mainHome__leftHome {
+    order: 2;
+  }
+
+  .mainHome__rightHome {
+    order: 1;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .cardHome__welcome {
+    text-align: center;
+  }
+
+  .mainLogin,
+  .mainHome {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .rightLogin__cardLogin,
+  .leftHome__cardHome {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #loginFormHeader {
+    font-size: 2.5rem;
+  }
+}
