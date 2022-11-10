@@ -37,7 +37,7 @@ function verifyFieldsAreEmpty($usernameForm, $passwordForm)
 
 function verifyValidEmail($usernameForm)
 {
-  if (!str_contains($usernameForm, '@')) {
+  if (!strpos($usernameForm, '@')) {
     $message = 'Informe um e-mail válido';
     $statusCode = 400;
     TransformToJson($message, $statusCode);
