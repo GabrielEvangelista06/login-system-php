@@ -1,0 +1,22 @@
+version: '3.7'
+services:
+  httpd:
+    build:
+      context: ./dockerfiles
+      dockerfile: httpd.Dockerfile
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./:/var/www/volkker.com.br
+      - ./dockerfiles/httpd/httpd.conf:/etc/httpd/conf/httpd.conf
+      - ./dockerfiles/httpd/virtual-host.conf:/etc/httpd/conf.d/00-volkker.com.br.conf
+      - ./dockerfiles/httpd/php.ini /etc/php.ini
+    networks:
+      - volkker_network
+
+networks:
+  volkker_network:
+    driver: bridge
